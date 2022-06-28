@@ -1,5 +1,5 @@
-import requests from './request.js'
-import mockreqursts from './mockrequest.js'
+import requests from '@/api/request'
+import mockreqursts from '@/api/mockrequest'
 
 //获取三级联动数据
 export const reqCategoryList = ()=>requests({url:'/product/getBaseCategoryList',method:'get'})

@@ -4,6 +4,7 @@ import router from '@/router'
 import Typenav from '@/components/Typenav/TypeNav.vue'
 import Banner from '@/components/Carousel'
 import Pagination from '@/components/Pagination'
+import '@/untils/reset.css'
 import store from '@/store'
 import { MessageBox} from 'element-ui';
 import * as API from '@/api'
