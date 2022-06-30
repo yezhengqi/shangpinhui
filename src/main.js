@@ -12,7 +12,7 @@ import * as API from '@/api'
 import '@/mock/serve'
 import 'swiper/css/swiper.css';
 import Lazyload from 'vue-lazyload'
-import loadimg from '@/assets/imglazy.gif'
+import loadimg from '/public/images/imglazy.gif'
 //引入表单校验插件
 import '@/plugin/validate'
 Vue.component(Typenav.name,Typenav)

@@ -39,7 +39,7 @@
         <h1 class="logoArea">
           <!-- <a class="logo" title="尚品汇" href="###" target="_blank"> -->
           <router-link class="logo" to="/home">
-            <img src="./images/logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </router-link>
           <!-- </a> -->
         </h1>

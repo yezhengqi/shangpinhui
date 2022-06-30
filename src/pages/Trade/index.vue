@@ -186,7 +186,7 @@ import { mapState } from 'vuex'
           position: absolute;
           right: 0;
           bottom: 0;
-          background: url(./images/choosed.png) no-repeat;
+          background: url('/public/images/choosed.png') no-repeat;
         }
 
         .username.selected {

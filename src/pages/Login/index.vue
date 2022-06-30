@@ -35,10 +35,10 @@
 
             <div class="call clearFix">
               <ul>
-                <li><img src="./images/qq.png" alt=""></li>
-                <li><img src="./images/sina.png" alt=""></li>
-                <li><img src="./images/ali.png" alt=""></li>
-                <li><img src="./images/weixin.png" alt=""></li>
+                <li><img src="/images/qq.png" alt=""></li>
+                <li><img src="/images/sina.png" alt=""></li>
+                <li><img src="/images/ali.png" alt=""></li>
+                <li><img src="/images/weixin.png" alt=""></li>
               </ul>
               <router-link class="register" to="/register">立即注册</router-link>
             </div>
@@ -106,7 +106,7 @@
         width: 1200px;
         height: 487px;
         margin: 0 auto;
-        background: url(./images/loginbg.png) no-repeat;
+        background: url(/public/images/loginbg.png) no-repeat;
       }
 
       .loginform {
@@ -169,7 +169,7 @@
                 width: 37px;
                 height: 32px;
                 border: 1px solid #ccc;
-                background: url(~@/assets/images/icons.png) no-repeat -10px -201px;
+                background: url(/public/images/icons.png) no-repeat -10px -201px;
                 box-sizing: border-box;
                 border-radius: 2px 0 0 2px;
               }
