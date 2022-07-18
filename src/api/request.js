@@ -17,12 +17,10 @@ requests.interceptors.request.use((config)=>{
     config.headers.token = store.state.User.token
   }
   nprogress.start()
-  console.log(config)
   return config
 })
 //发送数据
 requests.interceptors.response.use((res)=>{
-  console.log(res)
   nprogress.done()
   return res.data;
 },(error)=>{

@@ -85,6 +85,7 @@ let router = new  Router({
     },
     {
       path:'/home',
+      //路由懒加载
       component: ()=>import("@/pages/Home/Home.vue"), 
       meta:{
         show: true
@@ -150,14 +151,17 @@ let router = new  Router({
 
 //全局前置导航守卫
 router.beforeEach(async (to,before,next)=>{
+  //获取token及用户信息
   let token = localStorage.getItem("TOKEN")
   let name = store.state.User.userinfo.name
   if(token){
     if(to.path == "/login"){
       next("/home")
     }else{
+      //如果用户信息存在
       if(name){
         next()
+      //如果用户不存在，尝试请求接口获取用户信息，获取失败则请求接口退出账号跳转到登录接口
       }else{
           try{
             await store.dispatch("userInfo")
@@ -172,7 +176,9 @@ router.beforeEach(async (to,before,next)=>{
     //未登录时，不能去往支付相关页面
     let topath = to.path
     console.log(topath)
+    //indexOf如果不存在字符返回-1，如果存在返回首字符出现的位置
     if(topath.indexOf('/center') !== -1 || topath.indexOf('/shopcar') !== -1 || topath.indexOf('/pay') !== -1){
+      //如果没有token记录topath,登录成功后拿取topath跳转
       next('/login?redirect='+topath)
     }else{
       next()
